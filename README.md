@@ -22,7 +22,7 @@ source ~/.bash_profile
 #### Нужны изменения из feature/TASK-1 для того, чтобы делать feature/TASK-2 и затем, когда feature/TASK-1 будет влита в develop, нужно перекинуть изменения feature/TASK-2 на develop. 
 1. Создаем ветку feature/TASK-2 от ветки feature/TASK-1.
 2. Ждем когда feature/TASK-1 будет вмержен в develop.
-3. Выпонляем: 
+3. Выполняем: 
 ```
 git rebase --onto develop feature/TASK-1 feature/TASK-2
 ```
@@ -33,4 +33,6 @@ git commit --amend --no-edit
 ```
 
 ## Open deeplink
+```
 adb shell am start -a android.intent.action.VIEW -d "android-app://com.app/path/"
+```
