@@ -23,8 +23,10 @@
 3. Выпонляем: git rebase --onto develop feature/TASK-1 feature/TASK-2
 
 #### Добавляем все изменения в последний коммит
-1. git add .
-2. git commit --amend --no-edit
+```
+git add .
+git commit --amend --no-edit
+```
 
 ## Open deeplink
 adb shell am start -a android.intent.action.VIEW -d "android-app://com.app/path/"
