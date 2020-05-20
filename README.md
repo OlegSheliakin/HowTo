@@ -14,3 +14,17 @@
 - echo 'export ANDROID_HOME=/Users/$USER/Library/Android/sdk' >> ~/.bash_profile
 - echo 'export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools' >> ~/.bash_profile
 - source ~/.bash_profile
+
+## Git
+
+#### Нужны изменения из feature/TASK-1 для того, чтобы делать feature/TASK-2 и затем, когда feature/TASK-1 будет влита в develop, нужно перекинуть изменения feature/TASK-2 на develop. 
+1. Создаем ветку feature/TASK-2 от ветки feature/TASK-1.
+2. Ждем когда feature/TASK-1 будет вмержен в develop.
+3. Выпонляем: git rebase --onto develop feature/TASK-1 feature/TASK-2
+
+#### Добавляем все изменения в последний коммит
+1. git add .
+2. git commit --amend --no-edit
+
+## Open deeplink
+adb shell am start -a android.intent.action.VIEW -d "android-app://com.app/path/"
