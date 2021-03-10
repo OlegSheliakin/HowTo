@@ -36,3 +36,15 @@ git commit --amend --no-edit
 ```
 adb shell am start -a android.intent.action.VIEW -d "android-app://com.app/path/"
 ```
+
+## Cloc
+
+#### Считает количество строк сгенерированного кода. Подходит для монолитных и многомодульных проектов.
+~~~
+find . -type d -name build | xargs cloc
+~~~
+
+#### Считает количество строк кода во всем проекте
+~~~
+cloc . 
+~~~
