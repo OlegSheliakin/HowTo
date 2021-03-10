@@ -38,6 +38,7 @@ adb shell am start -a android.intent.action.VIEW -d "android-app://com.app/path/
 ```
 
 ## Cloc
+https://github.com/AlDanial/cloc
 
 #### Считает количество строк сгенерированного кода. Подходит для монолитных и многомодульных проектов.
 ~~~
