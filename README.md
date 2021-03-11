@@ -41,6 +41,8 @@ adb shell am start -a android.intent.action.VIEW -d "android-app://com.app/path/
 https://github.com/AlDanial/cloc
 
 #### Считаем количество строк сгенерированного кода. Подходит для монолитных и многомодульных проектов.
+. - это текущая директория. Если вы находитесь в директории с проектом, то это подходит, иначе нужно указать путь к проекту.
+
 ~~~
 find . -type d -name build | xargs cloc
 ~~~
@@ -48,4 +50,9 @@ find . -type d -name build | xargs cloc
 #### Считаем количество строк кода во всем проекте
 ~~~
 cloc . 
+~~~
+
+#### Считаем сколько строк кода сгенерировал Dagger
+~~~
+find . -type f -name "**Factory.java" -o -name "**MembersInjector.java" -o -name "Dagger**.java" | xargs zip archive.zip -q ; cloc archive.zip ; rm archive.zip
 ~~~
