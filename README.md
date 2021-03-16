@@ -54,5 +54,8 @@ cloc .
 
 #### Считаем сколько строк кода сгенерировал Dagger
 ~~~
-find . -type d -name build -exec find {} -type f -name "**Factory.java" -o -name "**MembersInjector.java" -o -name "Dagger**.java" \; | xargs zip archive.zip -q ; cloc archive.zip ; rm archive.zip
+find . -type d -name build -exec \
+find {} -type f -name "**Factory.java" -o -name "**MembersInjector.java" -o -name "Dagger**.java" \; | xargs zip archive.zip -q ; \
+cloc archive.zip ; \
+rm archive.zip
 ~~~
